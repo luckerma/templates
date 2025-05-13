@@ -1,0 +1,77 @@
+\documentclass{beamer}
+
+\input{./resources/config.tex}
+\input{./resources/colors.tex}
+%\input{./resources/math.tex}
+
+\begin{document}
+
+% TITLE PAGE
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% SECTION: Introduction
+\section{Introduction}
+
+% NORMAL SLIDE
+\begin{frame}{Slide}
+    \framesubtitle{A Subtitle Here}
+
+    \begin{itemize}
+        \item First main point
+        \item Second main point
+              \begin{itemize}
+                  \item Sub-point
+                  \item Another sub-point
+              \end{itemize}
+        \item Third main point
+    \end{itemize}
+
+    \begin{block}{Key Concept}
+        Important definition or theorem here
+    \end{block}
+\end{frame}
+
+% TIKZ SLIDE
+\begin{frame}{TikZ Diagram}
+    \begin{center}
+        \begin{tikzpicture}[node distance=2cm]
+            \node (start) [rectangle, draw, fill=blue!20, text width=4cm]
+            {Initial Concept};
+            \node (process) [rectangle, draw, fill=red!20, below of=start]
+            {Processing Stage};
+            \node (end) [rectangle, draw, fill=green!20, below of=process]
+            {Final Result};
+
+            \draw [->] (start) -- (process);
+            \draw [->] (process) -- (end);
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{alertblock}{Diagram Interpretation}
+        Explain the diagram components here
+    \end{alertblock}
+\end{frame}
+
+% IMAGE SLIDE
+\begin{frame}{Image}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.6\textwidth]{./resources/images/gbc16_polynomial_regression.png}
+        \caption{Example image caption~\cite{GoodfellowDeepLearning}}
+        \label{fig:example}
+    \end{figure}
+
+    \begin{example}
+        Image description and context goes here
+    \end{example}
+\end{frame}
+
+% REFERENCES SLIDE
+\begin{frame}[allowframebreaks, noframenumbering, plain]{References}
+    \sloppy
+    \printbibliography
+\end{frame}
+
+\end{document}
