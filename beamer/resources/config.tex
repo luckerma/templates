@@ -46,8 +46,9 @@
             \usebeamerfont{title in head/foot}\insertshorttitle%
         \end{beamercolorbox}%
         \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-            \usebeamerfont{date in head/foot}\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
-        \end{beamercolorbox}}
+            \usebeamerfont{date in head/foot}\insertpagenumber{}/\insertpresentationendpage\hspace*{2ex}
+        \end{beamercolorbox}
+    }
     \vskip0pt%
 }
 \makeatother
